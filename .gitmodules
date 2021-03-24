@@ -1,0 +1,3 @@
+[submodule "DotEngine/vendor/spdlog"]
+	path = DotEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

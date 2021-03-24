@@ -57,6 +57,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>DE_PLATFORM_WINDOWS;DE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)DotEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,12 +80,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\DotEngine\Log.h" />
     <ClInclude Include="src\DotEngine.h" />
     <ClInclude Include="src\DotEngine\Application.h" />
     <ClInclude Include="src\DotEngine\Core.h" />
     <ClInclude Include="src\DotEngine\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\DotEngine\Log.cpp" />
     <ClCompile Include="src\DotEngine\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
