@@ -9,3 +9,5 @@
 #else
 #error DotEngine only support windows!
 #endif // #ifdef DE_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

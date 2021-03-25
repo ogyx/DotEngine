@@ -7,8 +7,8 @@ int main(int argc, char** argv)
 {
 
     DotEngine::Log::InitLog();
-    DOTENGINE_CORE_WARN("TestClient:");
-    DOTENGINE_CLIENT_INFO("TestCore:");
+    DOT_CORE_WARN("TestClient:");
+    DOT_INFO("TestCore:");
 	auto app = DotEngine::CreateApplication();
 	app->Run();
 	delete app;

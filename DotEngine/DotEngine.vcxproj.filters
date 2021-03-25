@@ -4,6 +4,9 @@
     <Filter Include="DotEngine">
       <UniqueIdentifier>{02270EDE-6E91-C254-B7CF-73FA2379A0A9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DotEngine\Events">
+      <UniqueIdentifier>{A69CB56D-9295-D4BF-BBC7-B944A71FB4CB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DotEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\DotEngine\EntryPoint.h">
       <Filter>DotEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DotEngine\Events\ApplicationEvent.h">
+      <Filter>DotEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DotEngine\Events\Event.h">
+      <Filter>DotEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DotEngine\Events\KeyEvent.h">
+      <Filter>DotEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DotEngine\Events\MouseEvent.h">
+      <Filter>DotEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\DotEngine\Log.h">
       <Filter>DotEngine</Filter>

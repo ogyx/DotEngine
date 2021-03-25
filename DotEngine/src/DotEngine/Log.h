@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Core.h"
-
 #include <memory>
 
+#include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace DotEngine
 {
@@ -23,15 +23,15 @@ namespace DotEngine
 }
 
 // Core logger macros
-#define DOTENGINE_CORE_TRACE(...)        DotEngine::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define DOTENGINE_CORE_INFO(...)         DotEngine::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define DOTENGINE_CORE_WARN(...)         DotEngine::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define DOTENGINE_CORE_ERROR(...)        DotEngine::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define DOTENGINE_CORE_FATAL(...)        DotEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define DOT_CORE_TRACE(...)        DotEngine::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define DOT_CORE_INFO(...)         DotEngine::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define DOT_CORE_WARN(...)         DotEngine::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define DOT_CORE_ERROR(...)        DotEngine::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define DOT_CORE_FATAL(...)        DotEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 // Client logger macros
-#define DOTENGINE_CLIENT_TRACE(...)      DotEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define DOTENGINE_CLIENT_INFO(...)       DotEngine::Log::GetClientLogger()->info(__VA_ARGS__)
-#define DOTENGINE_CLIENT_WARN(...)       DotEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define DOTENGINE_CLIENT_ERROR(...)      DotEngine::Log::GetClientLogger()->error(__VA_ARGS__)
-#define DOTENGINE_CLIENT_FATAL(...)      DotEngine::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define DOT_TRACE(...)      DotEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define DOT_INFO(...)       DotEngine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define DOT_WARN(...)       DotEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define DOT_ERROR(...)      DotEngine::Log::GetClientLogger()->error(__VA_ARGS__)
+#define DOT_FATAL(...)      DotEngine::Log::GetClientLogger()->fatal(__VA_ARGS__)
