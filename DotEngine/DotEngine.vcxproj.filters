@@ -7,6 +7,12 @@
     <Filter Include="DotEngine\Events">
       <UniqueIdentifier>{A69CB56D-9295-D4BF-BBC7-B944A71FB4CB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\DotEngine.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\DotEngine\Log.h">
       <Filter>DotEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\DotEngine\Window.h">
+      <Filter>DotEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\dotpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\DotEngine\Log.cpp">
       <Filter>DotEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\dotpch.cpp" />
   </ItemGroup>

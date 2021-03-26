@@ -13,6 +13,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
+
+#include "DotEngine/Log.h"
+
 #ifdef DE_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif // #ifdef DE_PLATFORM_WINDOWS

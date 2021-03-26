@@ -10,6 +10,12 @@ workspace "DotEngine" -- solution
 
 outputdir = "%{cfg.buldcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder(solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "DotEngine/vendor/GLFW/include"
+
+include "DotEngine/vendor/GLFW"
+
 project "DotEngine"
     location "DotEngine"
     kind "SharedLib" -- DLL
@@ -30,7 +36,14 @@ project "DotEngine"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
     
     filter "system:windows"
