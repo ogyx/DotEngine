@@ -97,6 +97,6 @@ namespace DotEngine
             return ss.str();
         }
 
-        EVENT_CLASS_TYPE(MouseButtonReleased)
+        EVENT_CLASS_TYPE(MouseButtonRleased)
     };
 }

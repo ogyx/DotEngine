@@ -1,5 +1,6 @@
 workspace "DotEngine" -- solution
     architecture "x64"
+    startproject "Sandbox"
 
     configurations
     {

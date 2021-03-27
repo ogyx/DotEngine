@@ -9,6 +9,7 @@ namespace DotEngine
         None = 0,
         WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
         AppTick, AppUpdate, AppRender,
+		KeyPressed, KeyReleased,
         MouseButtonPressed, MouseButtonRleased, MouseMoved, MouseScrolled
     };
 
@@ -61,7 +62,7 @@ namespace DotEngine
         template<typename T>
         bool Dispatch(EventFn<T> func)
         {
-            if (m_Event.GetEventType() == T.GetStaticType())
+            if (m_Event.GetEventType() == T::GetStaticType())
             {
                 m_Event.m_Handled = func(*(T*)&m_Event);
                 return true;
