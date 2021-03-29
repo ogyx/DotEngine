@@ -1,7 +1,7 @@
 #pragma once
 #include "DotEngine/Window.h"
-#include <GLFW/glfw3.h>
 
+#include <GLFW/glfw3.h>
 
 namespace DotEngine
 {
@@ -9,7 +9,7 @@ namespace DotEngine
     {
     public:
         WindowsWindow(const WindowProps& props);
-        virtual ~WindowsWindow();
+		virtual ~WindowsWindow();
 
         void OnUpdate() override;
 

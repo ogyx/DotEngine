@@ -1,4 +1,4 @@
-workspace "DotEngine" -- solution
+﻿workspace "DotEngine" -- solution
     architecture "x64"
     startproject "Sandbox"
 
@@ -14,8 +14,10 @@ outputdir = "%{cfg.buldcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder(solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "DotEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "DotEngine/vendor/Glad/include"
 
 include "DotEngine/vendor/GLFW"
+include "DotEngine/vendor/Glad"
 
 project "DotEngine"
     location "DotEngine"
@@ -38,12 +40,14 @@ project "DotEngine"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+		"Glad",
         "opengl32.lib"
     }
     
@@ -55,7 +59,8 @@ project "DotEngine"
         defines
         {
             "DE_PLATFORM_WINDOWS",
-            "DE_BUILD_DLL"
+            "DE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

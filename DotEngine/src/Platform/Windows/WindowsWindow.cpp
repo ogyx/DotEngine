@@ -5,6 +5,8 @@
 #include "DotEngine/Events/MouseEvent.h"
 #include "DotEngine/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+//#include <GLFW/glfw3.h>
 
 namespace DotEngine
 {
@@ -51,6 +53,11 @@ namespace DotEngine
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		// GLAD
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		DOT_CORE_ASSERT(status, "Failed to initialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
